@@ -15,6 +15,12 @@ Role Variables
 
     aptget_update_cache_valid_time: 3600
 
+    certbot_cron:
+      minute: "3"
+      hour: "4"
+      day: "*"
+      weekday: "0"
+
 Dependencies
 ------------
 

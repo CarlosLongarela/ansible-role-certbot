@@ -15,3 +15,12 @@
     state: present
     update_cache: yes
     cache_valid_time: "{{ aptget_update_cache_valid_time }}"
+
+- name: Añadimos la tarea cron de comprobación de certificados.
+  cron:
+    name: "Certificados Certbot"
+    minute: "{{ certbot_cron.minute }}"
+    hour: "{{ certbot_cron.hour }}"
+    day: "{{ certbot_cron.day }}"
+    weekday: "{{ certbot_cron.weekday }}"
+    job: 'certbot renew --renew-hook "service nginx restart"'
