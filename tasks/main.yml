@@ -1,0 +1,17 @@
+---
+- name: Nos aseguramos que Open SSL está instalado.
+  apt:
+    name: openssl
+    state: present
+    update_cache: yes
+    cache_valid_time: "{{ aptget_update_cache_valid_time }}"
+
+- name: Creamos dhparam.pem para Nginx SSL
+  command: openssl dhparam -out /etc/ssl/certs/dhparam.pem 4096 creates=/etc/ssl/certs/dhparam.pem
+
+- name: Instalamos Certbot (Lets Encrypt).
+  apt:
+    name: certbot
+    state: present
+    update_cache: yes
+    cache_valid_time: "{{ aptget_update_cache_valid_time }}"
