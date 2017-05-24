@@ -16,5 +16,7 @@ galaxy_info:
     - system
     - development
     - web
+    - ssl
+    - Lets Encrypt
 
 dependencies: []
