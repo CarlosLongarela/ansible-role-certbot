@@ -2,6 +2,8 @@ Ansible Role: Certbot
 =========
 
 [![Build Status](https://travis-ci.org/CarlosLongarela/ansible-role-certbot.svg?branch=master)](https://travis-ci.org/CarlosLongarela/ansible-role-certbot)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/CarlosLongarela/ansible-role-certbot.svg)](http://isitmaintained.com/project/CarlosLongarela/ansible-role-certbot "Percentage of issues still open")
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/CarlosLongarela/ansible-role-certbot.svg)](http://isitmaintained.com/project/CarlosLongarela/ansible-role-certbot "Average time to resolve an issue")
 
 Certbot installation and dhparam.pem generation.
 
