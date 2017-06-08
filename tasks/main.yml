@@ -9,6 +9,12 @@
 - name: Creamos dhparam.pem para Nginx SSL
   command: openssl dhparam -out /etc/ssl/certs/dhparam.pem 4096 creates=/etc/ssl/certs/dhparam.pem
 
+- name: Añadir repositorio oficial de Certbot (Lets Encrypt).
+  apt_repository:
+    repo: 'ppa:certbot/certbot'
+    state: present
+    update_cache: yes
+
 - name: Instalamos Certbot (Lets Encrypt).
   apt:
     name: certbot
