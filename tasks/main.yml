@@ -29,4 +29,4 @@
     hour: "{{ certbot_cron.hour }}"
     day: "{{ certbot_cron.day }}"
     weekday: "{{ certbot_cron.weekday }}"
-    job: 'certbot renew --renew-hook "service nginx restart"'
+    job: 'certbot renew --deploy-hook "service nginx restart"'
